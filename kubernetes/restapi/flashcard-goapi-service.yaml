@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flashcard-goapi-service
+  namespace: restapi
+  labels:
+    app: flashcard-goapi
+spec:
+  selector:
+    app: flashcard-goapi
+  type: ClusterIP
+  ports:
+    - port: 3001
+      targetPort: 3001
+      protocol: TCP
